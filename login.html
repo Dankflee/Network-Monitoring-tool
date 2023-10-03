@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+            background-color: #f2f2f2;
+            color: #333;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* Additional funky CSS styles */
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #4CAF50;
+            font-size: 18px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .container {
+            background-color: #fefefe;
+            border: 2px solid #4CAF50;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .container:hover {
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        }
+
+        body {
+            animation: rainbow 10s infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: #ff0000;
+            }
+
+            20% {
+                color: #ff8000;
+            }
+
+            40% {
+                color: #ffff00;
+            }
+
+            60% {
+                color: #00ff00;
+            }
+
+            80% {
+                color: #0000ff;
+            }
+
+            100% {
+                color: #ff00ff;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <div class="error"><?php echo $error; ?></div>
+            <label for="username">Username</label>
+            <input type="text" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
