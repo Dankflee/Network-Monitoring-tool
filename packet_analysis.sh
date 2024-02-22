@@ -1,5 +1,5 @@
 #! /bin/bash
-tcpdump -ne -c 1000 > packets
+tcpdump -ne -c 3000 > packets
 grep "ARP" packets > arp
 grep "UDP" packets > udp
 grep "IPv4" packets > ip
@@ -22,7 +22,7 @@ cut -d " " -f 12 udp > dip_udp
 cut -d "." -f 1-4 dip_udp > destinationip_udp
 cut -d "." -f 5 dip_udp > d_port_udp
 cut -d ":" -f 1 d_port_udp > destinationport_udp
-cut -d " " -f 15 udp > X_udp
+cut -d " " -f 16 udp > X_udp #15
 cut -d . -f 5 Sourceip_udp > sourceport_udp
 cut -d . -f 1-4 Sourceip_udp > sourceip_udp
 grep -Eo '[0-9]{1,4}' X_udp > plength_udp
